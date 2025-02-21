@@ -1,0 +1,21 @@
+{
+  "name": "hra-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.0",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.3.2"
+  }
+}

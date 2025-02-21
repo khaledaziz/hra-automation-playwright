@@ -1,0 +1,209 @@
+{
+    "uaePassData": {
+      "cardExpiryDate": "",
+      "cardHolderSignatureImage": "",
+      "dateOfBirth": "01/07/1985",
+      "firstNameAr": "راشد",
+      "firstNameEn": "DDDD",
+      "fullNameAr": "راشد سعيد سالم جابر المنصورى",
+      "fullNameEn": "RASHED SAEED SALEM JABER ALMANSOORI",
+      "gender": "MALE",
+      "titleEn": "",
+      "titleAr": "",
+      "profileType": "",
+      "unifiedID": "",
+      "homeAddressCityDescriptionEn": "Ghayathi",
+      "homeAddressEmirateDescriptionEn": "Abu dhabi",
+      "homeAddressPoBox": "12444",
+      "idn": "78410036201470",
+      "lastNameAr": "منذرى",
+      "lastNameEn": "JABER",
+      "maritalStatus": "Divorced",
+      "mobileNumber": "9715400000001",
+      "motherFirstNameAr": "",
+      "motherFirstNameEn": "",
+      "nationalityEn": "ARE",
+      "photo": "",
+      "originalPhotoUrl": "",
+      "residencyExpiryDate": "",
+      "residencyNumber": "",
+      "type": "SOP3",
+      "originalType": "SOP1",
+      "userEmail": "registerjobseeker@gmail.com",
+      "userUniqueIdentifier": "1921197F-DE6B-9723-2374-C6821C4E3123",
+      "provider": "uaepass",
+      "smartPassToken": "bPjIfHlkQNePm0yY0gDo/QhdP87bq5+V3G0iGIUFXXE2XDk+pZpBH6TtBDCfct9m",
+      "thirdPartyToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJBdXRob3JpdHkiOiJUQU1NIiwidXVpZCI6IjE5MjExOTdGLURFNkItOTcyMy0yMzc0LUM2ODIxQzRFMzk0MyIsImV4cCI6MTY5NDUwNzg5Niwia2V5IjoiNHlZUmJNZGJnZkVHNkJDZ2lHWm5oc1V6STZwRGs0SU9acXluUWNZSXlSQ1RMZyszNVNwYjAyclJ6TzJLMWcvNyIsImF1ZCI6IndlYmFwcCIsInN1YiI6IjE5MjExOTdGLURFNkItOTcyMy0yMzc0LUM2ODIxQzRFMzk0MyIsIm5vbmNlIjoiIiwiaWF0IjoxNjk0NDIxNDk2fQ.qnEpbvFHZaxuM9dlhXHdrggXRNoLtckFi7AM4VhJyI3pQsBgkrQu9qFUfY-zpTX1aS1oy86nTdGGQ0GSSUhq9aBsIMZEJqbb9EScKpPuWuHMO64otq8s-AIyYHLQt_DhvfVyK_7hfpVUstXwL5ZpQeIaMwCBEhNkpooVsXxsesvBEdJCdLzkWcSBN4QtbE4dPZsrGjl0ew5PU7Dab10NuUb-kE-9OB6HYkHY6mhakznIc1TmgVF-oMchww6KxA6NJgQA5NQ54W7nMO2Rt-J2kSPtyEzoOT39IaPgzH8vBP5VCtsdg6caej9ez8WSDQOyw7Djsge8RhURnhSMQypCcvIbACuklO8hZRBT9zv32JTmCnLRjwyGJu2DkPuLzBoHlFIK0D0uE174A_O9rymDbV-b8Mk5P3QjaCXDPOqAq4iQz7N_ip3GiiEW3hBggp610foR7Axvo0xRVOeTKRsiHZMtaTfGT9gLkEaeQWtx9dXPP5TsztF_sR_iCX1eNdM_KACpSpubImS4616WwIi-AUg3v7EippBaX-VzzlLsUWOqcHIuR3CPH9WCLyEGrgbCOF6lorBLRCcOT2tAi0SVDaBtDp5sSvZuUQBH0b-CbXMn08Qh6jlMOLL38adUtyYnX6qxApjc3s23KG7YhfMewS7Ggewz76MEauVETlfuXag"
+    },
+    "icaData": {
+      "unifiedNumber": 108783,
+      "identityCard": {
+        "number": 78410036201470,
+        "issuDate": "2012-01-17T09:53:47",
+        "expiryDate": "2030-10-04T00:00:00"
+      },
+      "nationality": {
+        "id": 1,
+        "arDesc": "الإمارات العربية المتحدة",
+        "enDesc": "UNITED ARAB EMIRATES"
+      },
+      "personName": {
+        "fullArabicName": "سالم صلاح بسام عصام الاحباب",
+        "firstNameArabic": "سالم",
+        "secondNameArabic": "صلاح",
+        "thirdNameArabic": "بسام",
+        "fourthNameArabic": "عصام",
+        "familyNameArabic": "الاحباب",
+        "fullEnglishName": "Register-existing-user-for-test",
+        "firstNameEnglish": "test",
+        "secondNameEnglish": "account",
+        "thirdNameEnglish": "for",
+        "fourthNameEnglish": "register",
+        "familyNameEnglish": "jobseeker",
+        "tribe": {
+          "id": 7080,
+          "arDesc": "المنصورى",
+          "enDesc": "ALMANSOORI"
+        }
+      },
+      "khulasitQaidNumber": "102/2819",
+      "familyBookNumber": "345471",
+      "edbarahNumber": null,
+      "gender": {
+        "id": 1,
+        "arDesc": "ddddd",
+        "enDesc": "MALE"
+      },
+      "dateOfBirth": "1987-07-01T00:00:00",
+      "countryOfBirth": {
+        "id": 1,
+        "arDesc": "الإمارات العربية المتحدة",
+        "enDesc": "UNITED ARAB EMIRATES"
+      },
+      "emirateOfBirth": {
+        "id": 1,
+        "arDesc": "أبو ظبي",
+        "enDesc": "ABU DHABI"
+      },
+      "cityOfBirth": {
+        "id": 1,
+        "arDesc": "مدينة أبو ظبي",
+        "enDesc": "Zlatograd"
+      },
+      "placeOfBirthAr": "غياثى",
+      "placeOfBirthEn": "Zlatograd",
+      "maritalStatus": {
+        "id": 2,
+        "arDesc": "متزوج",
+        "enDesc": "Divorced"
+      },
+      "religion": {
+        "id": 1,
+        "arDesc": "الإسلام",
+        "enDesc": "ISLAM"
+      },
+      "passport": {
+        "number": "RKZN27895",
+        "type": {
+          "id": 1,
+          "arDesc": "جواز سفر عادي",
+          "enDesc": "ORDINARY PASSPORT"
+        },
+        "issuDate": "2014-01-29T00:00:00",
+        "expiryDate": "2030-10-04T00:00:00",
+        "issueCountry": {
+          "id": 1,
+          "arDesc": "الإمارات العربية المتحدة",
+          "enDesc": "UNITED ARAB EMIRATES"
+        },
+        "issuePlace": "ابوظبى"
+      },
+      "immigrationFile": {
+        "status": {
+          "enDesc": null
+        },
+        "department": null,
+        "type": null
+      },
+      "occupation": {
+        "id": 15914,
+        "arDesc": "موظف",
+        "enDesc": "EMPLOYEE"
+      },
+      "motherNameAr": "انيس",
+      "motherNameEn": "ANEES",
+      "addresses": {
+        "address": {
+          "localAddress": {
+            "emirate": {
+              "id": 3,
+              "arDesc": "الشارقة",
+              "enDesc": "SHARJAH"
+            },
+            "city": {
+              "id": 14,
+              "arDesc": "مدينة الشارقة",
+              "enDesc": "SHARJAH CITY"
+            },
+            "area": {
+              "id": 30103258,
+              "arDesc": "الرمله",
+              "enDesc": "AL RAMLAH"
+            },
+            "street": {
+              "id": 30100000,
+              "arDesc": "اماره الشارقه"
+            },
+            "building": null,
+            "pobox": "0",
+            "mobileNumber": "0507674952",
+            "mobileNumber2": null,
+            "homePhone": "0",
+            "workPhone": "0",
+            "fax": null,
+            "email": null
+          }
+        }
+      },
+      "allAddresses": [
+        {
+          "localAddress": {
+            "emirate": {
+              "id": 1,
+              "arDesc": "أبو ظبي",
+              "enDesc": "ABU DHABI"
+            },
+            "city": {
+              "id": 5,
+              "arDesc": "غياثي",
+              "enDesc": "GHAYATHI"
+            },
+            "area": {
+              "id": 11600116,
+              "arDesc": "غياثي"
+            },
+            "street": {
+              "id": 11600000,
+              "arDesc": "غير محدد"
+            },
+            "building": null,
+            "pobox": "12443",
+            "mobileNumber": "0508276687",
+            "mobileNumber2": null,
+            "homePhone": "028740662",
+            "workPhone": "028740662",
+            "fax": null,
+            "email": null
+          }
+        }
+      ],
+      "qualification": {
+        "country": null,
+        "specialization": null
+      },
+      "familyCount": 4,
+      "familyMaleCount": 3,
+      "familyFemaleCount": 1
+    },
+    "hasConsent": true
+  }

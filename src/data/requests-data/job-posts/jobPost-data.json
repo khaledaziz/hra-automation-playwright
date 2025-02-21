@@ -1,0 +1,1036 @@
+{
+    "mandatorySkills": [
+      {
+        "preferredLabel": "execute analytical mathematical calculations",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "perform scientific research",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "use technical drawing software",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "manage engineering project",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "present artistic design proposals",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "interpret technical requirements",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "execute feasibility study",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "define technical requirements",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "assess financial viability",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      }
+    ],
+    "assetMandatorySkills": [
+      {
+        "text": "execute analytical mathematical calculations",
+        "selectedEscoSkill": [
+          "execute analytical mathematical calculations"
+        ],
+        "id": "908360371"
+      },
+      {
+        "text": "perform scientific research",
+        "selectedEscoSkill": [
+          "perform scientific research"
+        ],
+        "id": "908852343"
+      },
+      {
+        "text": "use technical drawing software",
+        "selectedEscoSkill": [
+          "use technical drawing software"
+        ],
+        "id": "587203615"
+      },
+      {
+        "text": "manage engineering project",
+        "selectedEscoSkill": [
+          "manage engineering project"
+        ],
+        "id": "90103550"
+      },
+      {
+        "text": "present artistic design proposals",
+        "selectedEscoSkill": [
+          "present artistic design proposals"
+        ],
+        "id": "1492225329"
+      },
+      {
+        "text": "interpret technical requirements",
+        "selectedEscoSkill": [
+          "interpret technical requirements"
+        ],
+        "id": "225203569"
+      },
+      {
+        "text": "execute feasibility study",
+        "selectedEscoSkill": [
+          "execute feasibility study"
+        ],
+        "id": "1025985636"
+      },
+      {
+        "text": "define technical requirements",
+        "selectedEscoSkill": [
+          "define technical requirements"
+        ],
+        "id": "1590228002"
+      },
+      {
+        "text": "assess financial viability",
+        "selectedEscoSkill": [
+          "assess financial viability"
+        ],
+        "id": "3731814"
+      }
+    ],
+    "assetMandatorySkillsAr": [
+      {
+        "text": "يجري عمليات الحسابات الرياضية التحليلية",
+        "selectedEscoSkill": [
+          "يجري عمليات الحسابات الرياضية التحليلية"
+        ],
+        "id": "945576284"
+      },
+      {
+        "text": "يُجري أبحاثًا علمية",
+        "selectedEscoSkill": [
+          "يُجري أبحاثًا علمية"
+        ],
+        "id": "699881256"
+      },
+      {
+        "text": "يستخدم برامج الرسم التقنية",
+        "selectedEscoSkill": [
+          "يستخدم برامج الرسم التقنية"
+        ],
+        "id": "304502596"
+      },
+      {
+        "text": "يدير المشاريع الهندسية",
+        "selectedEscoSkill": [
+          "يدير المشاريع الهندسية"
+        ],
+        "id": "1200506460"
+      },
+      {
+        "text": "يقدم مقترحات التصميم التفصيلية",
+        "selectedEscoSkill": [
+          "يقدم مقترحات التصميم التفصيلية"
+        ],
+        "id": "482192078"
+      },
+      {
+        "text": "يفسر المتطلبات الفنية",
+        "selectedEscoSkill": [
+          "يفسر المتطلبات الفنية"
+        ],
+        "id": "864635777"
+      },
+      {
+        "text": "ينفذ دراسة الجدوى",
+        "selectedEscoSkill": [
+          "ينفذ دراسة الجدوى"
+        ],
+        "id": "2033069948"
+      },
+      {
+        "text": "يحدد المتطلبات الفنية",
+        "selectedEscoSkill": [
+          "يحدد المتطلبات الفنية"
+        ],
+        "id": "529504273"
+      },
+      {
+        "text": "يقيّم الجدوى المالية",
+        "selectedEscoSkill": [
+          "يقيّم الجدوى المالية"
+        ],
+        "id": "1243541659"
+      }
+    ],
+    "optionalSkills": [
+      {
+        "preferredLabel": "supervise work on design planning",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "keep up with digital transformation of industrial processes",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "determine suitability of materials",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "record test data",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "adjust engineering designs",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "perform test run",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "create a product's virtual model",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "create technical plans",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "analyse stress resistance of products",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "adapt to new design materials",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "build a product's physical model",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "use testing equipment",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "design power plant systems",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "analyse test data",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "draft design specifications",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "conduct research on trends in design",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "analyse stress resistance of materials",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "use CAD software",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "design prototypes",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "conduct performance tests",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "liaise with engineers",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "prepare production prototypes",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "develop test procedures",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      },
+      {
+        "preferredLabel": "draw design sketches",
+        "alternateLabels": "",
+        "description": "",
+        "similarity": "",
+        "count": 1,
+        "avg": 1
+      }
+    ],
+    "assetOptionalSkills": [
+      {
+        "text": "supervise work on design planning",
+        "selectedEscoSkill": [
+          "supervise work on design planning"
+        ],
+        "id": "560405573"
+      },
+      {
+        "text": "keep up with digital transformation of industrial processes",
+        "selectedEscoSkill": [
+          "keep up with digital transformation of industrial processes"
+        ],
+        "id": "2122093049"
+      },
+      {
+        "text": "determine suitability of materials",
+        "selectedEscoSkill": [
+          "determine suitability of materials"
+        ],
+        "id": "207351533"
+      },
+      {
+        "text": "record test data",
+        "selectedEscoSkill": [
+          "record test data"
+        ],
+        "id": "884580212"
+      },
+      {
+        "text": "adjust engineering designs",
+        "selectedEscoSkill": [
+          "adjust engineering designs"
+        ],
+        "id": "170051367"
+      },
+      {
+        "text": "perform test run",
+        "selectedEscoSkill": [
+          "perform test run"
+        ],
+        "id": "1017913446"
+      },
+      {
+        "text": "create a product's virtual model",
+        "selectedEscoSkill": [
+          "create a product's virtual model"
+        ],
+        "id": "1381244094"
+      },
+      {
+        "text": "create technical plans",
+        "selectedEscoSkill": [
+          "create technical plans"
+        ],
+        "id": "895279943"
+      },
+      {
+        "text": "analyse stress resistance of products",
+        "selectedEscoSkill": [
+          "analyse stress resistance of products"
+        ],
+        "id": "463418721"
+      },
+      {
+        "text": "adapt to new design materials",
+        "selectedEscoSkill": [
+          "adapt to new design materials"
+        ],
+        "id": "1349455712"
+      },
+      {
+        "text": "build a product's physical model",
+        "selectedEscoSkill": [
+          "build a product's physical model"
+        ],
+        "id": "1719892266"
+      },
+      {
+        "text": "use testing equipment",
+        "selectedEscoSkill": [
+          "use testing equipment"
+        ],
+        "id": "1299488571"
+      },
+      {
+        "text": "design power plant systems",
+        "selectedEscoSkill": [
+          "design power plant systems"
+        ],
+        "id": "1563300639"
+      },
+      {
+        "text": "analyse test data",
+        "selectedEscoSkill": [
+          "analyse test data"
+        ],
+        "id": "1947432658"
+      },
+      {
+        "text": "draft design specifications",
+        "selectedEscoSkill": [
+          "draft design specifications"
+        ],
+        "id": "349306378"
+      },
+      {
+        "text": "conduct research on trends in design",
+        "selectedEscoSkill": [
+          "conduct research on trends in design"
+        ],
+        "id": "71959683"
+      },
+      {
+        "text": "analyse stress resistance of materials",
+        "selectedEscoSkill": [
+          "analyse stress resistance of materials"
+        ],
+        "id": "814323619"
+      },
+      {
+        "text": "use CAD software",
+        "selectedEscoSkill": [
+          "use CAD software"
+        ],
+        "id": "2077885581"
+      },
+      {
+        "text": "design prototypes",
+        "selectedEscoSkill": [
+          "design prototypes"
+        ],
+        "id": "1601189893"
+      },
+      {
+        "text": "conduct performance tests",
+        "selectedEscoSkill": [
+          "conduct performance tests"
+        ],
+        "id": "2012094792"
+      },
+      {
+        "text": "liaise with engineers",
+        "selectedEscoSkill": [
+          "liaise with engineers"
+        ],
+        "id": "1315576048"
+      },
+      {
+        "text": "prepare production prototypes",
+        "selectedEscoSkill": [
+          "prepare production prototypes"
+        ],
+        "id": "200117714"
+      },
+      {
+        "text": "develop test procedures",
+        "selectedEscoSkill": [
+          "develop test procedures"
+        ],
+        "id": "1699177567"
+      },
+      {
+        "text": "draw design sketches",
+        "selectedEscoSkill": [
+          "draw design sketches"
+        ],
+        "id": "1959791008"
+      }
+    ],
+    "assetOptionalSkillsAr": [
+      {
+        "text": "يشرف على العمل على إعداد التصميمات",
+        "selectedEscoSkill": [
+          "يشرف على العمل على إعداد التصميمات"
+        ],
+        "id": "1949433100"
+      },
+      {
+        "text": "يواكب التحول الرقمي للعمليات الصناعية",
+        "selectedEscoSkill": [
+          "يواكب التحول الرقمي للعمليات الصناعية"
+        ],
+        "id": "1880551144"
+      },
+      {
+        "text": "يحدد مدى ملاءمة المواد",
+        "selectedEscoSkill": [
+          "يحدد مدى ملاءمة المواد"
+        ],
+        "id": "1076319017"
+      },
+      {
+        "text": "يسجل بيانات الاختبار",
+        "selectedEscoSkill": [
+          "يسجل بيانات الاختبار"
+        ],
+        "id": "1732936568"
+      },
+      {
+        "text": "يضبط التصاميم الهندسية",
+        "selectedEscoSkill": [
+          "يضبط التصاميم الهندسية"
+        ],
+        "id": "265934278"
+      },
+      {
+        "text": "ينفذ تجربة الاختبار",
+        "selectedEscoSkill": [
+          "ينفذ تجربة الاختبار"
+        ],
+        "id": "1094508941"
+      },
+      {
+        "text": "يضع نموذجًا تخيليًا للمنتج",
+        "selectedEscoSkill": [
+          "يضع نموذجًا تخيليًا للمنتج"
+        ],
+        "id": "209714006"
+      },
+      {
+        "text": "يضع خططًا تقنية",
+        "selectedEscoSkill": [
+          "يضع خططًا تقنية"
+        ],
+        "id": "609495197"
+      },
+      {
+        "text": "يحلل مقاومة المنتجات للضغط",
+        "selectedEscoSkill": [
+          "يحلل مقاومة المنتجات للضغط"
+        ],
+        "id": "899699820"
+      },
+      {
+        "text": "يتكيف مع مواد التصميم الجديدة",
+        "selectedEscoSkill": [
+          "يتكيف مع مواد التصميم الجديدة"
+        ],
+        "id": "1338477945"
+      },
+      {
+        "text": "يضع نموذجًا مادياً للمنتج",
+        "selectedEscoSkill": [
+          "يضع نموذجًا مادياً للمنتج"
+        ],
+        "id": "1842795050"
+      },
+      {
+        "text": "يستخدم معدات الاختبار",
+        "selectedEscoSkill": [
+          "يستخدم معدات الاختبار"
+        ],
+        "id": "602837342"
+      },
+      {
+        "text": "بصمم أنظمة محطة توليد الكهرباء",
+        "selectedEscoSkill": [
+          "بصمم أنظمة محطة توليد الكهرباء"
+        ],
+        "id": "931407280"
+      },
+      {
+        "text": "يحلل بيانات الاختبار",
+        "selectedEscoSkill": [
+          "يحلل بيانات الاختبار"
+        ],
+        "id": "1570478692"
+      },
+      {
+        "text": "يعد مواصفات التصميم",
+        "selectedEscoSkill": [
+          "يعد مواصفات التصميم"
+        ],
+        "id": "1754897559"
+      },
+      {
+        "text": "يجري أبحاثاً على توجهات التصميم",
+        "selectedEscoSkill": [
+          "يجري أبحاثاً على توجهات التصميم"
+        ],
+        "id": "1834132081"
+      },
+      {
+        "text": "يحلل مقاومة إجهاد المواد",
+        "selectedEscoSkill": [
+          "يحلل مقاومة إجهاد المواد"
+        ],
+        "id": "222396542"
+      },
+      {
+        "text": "يستخدم برمجيات التصميم بمساعدة الحاسوب",
+        "selectedEscoSkill": [
+          "يستخدم برمجيات التصميم بمساعدة الحاسوب"
+        ],
+        "id": "1749647525"
+      },
+      {
+        "text": "يصمم النماذج",
+        "selectedEscoSkill": [
+          "يصمم النماذج"
+        ],
+        "id": "2139381891"
+      },
+      {
+        "text": "يجري اختبارات الأداء",
+        "selectedEscoSkill": [
+          "يجري اختبارات الأداء"
+        ],
+        "id": "286730197"
+      },
+      {
+        "text": "ينسق مع المهندسين",
+        "selectedEscoSkill": [
+          "ينسق مع المهندسين"
+        ],
+        "id": "595464818"
+      },
+      {
+        "text": "يعد نماذج الإنتاج",
+        "selectedEscoSkill": [
+          "يعد نماذج الإنتاج"
+        ],
+        "id": "1382151721"
+      },
+      {
+        "text": "يطور إجراءات الاختبار",
+        "selectedEscoSkill": [
+          "يطور إجراءات الاختبار"
+        ],
+        "id": "1776340373"
+      },
+      {
+        "text": "يرسم رسومات التصميم",
+        "selectedEscoSkill": [
+          "يرسم رسومات التصميم"
+        ],
+        "id": "46205307"
+      }
+    ],
+    "escoCode": "2149.2.4",
+    "escoOccupation": "design engineer",
+    "id": null,
+    "selectJobDescription": "test job template automation",
+    "opportunityType": "external",
+    "recruiterQuestionsInternal": [
+  
+    ],
+    "recruiterQuestionsExternal": [
+  
+    ],
+    "published": [
+      "External"
+    ],
+    "assignRecruiter": null,
+    "startDate": "",
+    "endDate": "",
+    "targetDate": "2023-09-05",
+    "tile": null,
+    "additionalBenefits": "Yearly Bonus",
+    "unpublishingReason": null,
+    "workingDays": 6,
+    "workingHours": 6,
+    "workType": "Full time",
+    "employmentType": "Temporary Employee",
+    "city": "Abu Dhabi",
+    "division": "N/A",
+    "department": "N/A",
+    "postingType": "Normal",
+    "openings": 2,
+    "isPublished": true,
+    "isPod": null,
+    "skipInterview": null,
+    "skipInterviewComment": "",
+    "sector": "N/A",
+    "matchingAlgorithmId": "AYSAJnk1C07fXA4TGNPt",
+    "matchingAlgorithm": "Demo Matching Algorithm",
+    "matchingAlgoAdditionalParams": [
+      {
+        "paramName": "certificate",
+        "paramValue": ""
+      }
+    ],
+    "certExtraParam": null,
+    "minRequiredEduLevel": "Doctoral",
+    "minYearsExperience": "2",
+    "certificates": [
+      "CIA - Certified Internal Auditor"
+    ],
+    "salaryRange": "45,000-49,999",
+    "careerLevel": "Entry Level",
+    "degree": "Agriculture",
+    "isUAEReserved": false,
+    "isTemplateActive": false,
+    "competence": "Communication",
+    "major": "Agribusiness",
+    "responsibilities": [
+  
+    ],
+    "leadershipMandatoryMappings": [
+  
+    ],
+    "leadershipOptionalMappings": [
+  
+    ],
+    "functionalMandatoryMappings": [
+  
+    ],
+    "functionalOptionalMappings": [
+  
+    ],
+    "knowledgeMandatory": [
+      {
+        "text": "engineering principles",
+        "selectedEscoKnowledge": [
+          "engineering principles"
+        ],
+        "id": "782355827"
+      },
+      {
+        "text": "mathematics",
+        "selectedEscoKnowledge": [
+          "mathematics"
+        ],
+        "id": "1977571451"
+      },
+      {
+        "text": "design principles",
+        "selectedEscoKnowledge": [
+          "design principles"
+        ],
+        "id": "304621426"
+      },
+      {
+        "text": "technical drawings",
+        "selectedEscoKnowledge": [
+          "technical drawings"
+        ],
+        "id": "1751163919"
+      },
+      {
+        "text": "project management",
+        "selectedEscoKnowledge": [
+          "project management"
+        ],
+        "id": "1566652812"
+      },
+      {
+        "text": "engineering processes",
+        "selectedEscoKnowledge": [
+          "engineering processes"
+        ],
+        "id": "146581758"
+      },
+      {
+        "text": "CAD software",
+        "selectedEscoKnowledge": [
+          "CAD software"
+        ],
+        "id": "1283244813"
+      }
+    ],
+    "knowledgeMandatoryAr": [
+      {
+        "text": "المبادئ الهندسية",
+        "selectedEscoKnowledge": [
+          "المبادئ الهندسية"
+        ],
+        "id": "397610202"
+      },
+      {
+        "text": "الرياضيات",
+        "selectedEscoKnowledge": [
+          "الرياضيات"
+        ],
+        "id": "1750277035"
+      },
+      {
+        "text": "مبادئ التصميم",
+        "selectedEscoKnowledge": [
+          "مبادئ التصميم"
+        ],
+        "id": "793512925"
+      },
+      {
+        "text": "الرسوم التقنية",
+        "selectedEscoKnowledge": [
+          "الرسوم التقنية"
+        ],
+        "id": "743591230"
+      },
+      {
+        "text": "إدارة المشاريع",
+        "selectedEscoKnowledge": [
+          "إدارة المشاريع"
+        ],
+        "id": "1119508790"
+      },
+      {
+        "text": "عمليات الهندسة",
+        "selectedEscoKnowledge": [
+          "عمليات الهندسة"
+        ],
+        "id": "11176696"
+      },
+      {
+        "text": "برمجيات التصميم بمساعدة الحاسوب",
+        "selectedEscoKnowledge": [
+          "برمجيات التصميم بمساعدة الحاسوب"
+        ],
+        "id": "1983212450"
+      }
+    ],
+    "knowledgeOptional": [
+      {
+        "text": "manufacturing processes",
+        "selectedEscoKnowledge": [
+          "manufacturing processes"
+        ],
+        "id": "862382443"
+      },
+      {
+        "text": "CAE software",
+        "selectedEscoKnowledge": [
+          "CAE software"
+        ],
+        "id": "1233598952"
+      },
+      {
+        "text": "thermohydraulics",
+        "selectedEscoKnowledge": [
+          "thermohydraulics"
+        ],
+        "id": "750008959"
+      },
+      {
+        "text": "product data management",
+        "selectedEscoKnowledge": [
+          "product data management"
+        ],
+        "id": "803752511"
+      },
+      {
+        "text": "nuclear physics",
+        "selectedEscoKnowledge": [
+          "nuclear physics"
+        ],
+        "id": "2094375817"
+      }
+    ],
+    "knowledgeOptionalAr": [
+      {
+        "text": "عمليات التصنيع",
+        "selectedEscoKnowledge": [
+          "عمليات التصنيع"
+        ],
+        "id": "29482744"
+      },
+      {
+        "text": "برنامج الهندسة بمساعدة الحاسوب",
+        "selectedEscoKnowledge": [
+          "برنامج الهندسة بمساعدة الحاسوب"
+        ],
+        "id": "1580202763"
+      },
+      {
+        "text": "علم السوائل المتحركة الحرارية",
+        "selectedEscoKnowledge": [
+          "علم السوائل المتحركة الحرارية"
+        ],
+        "id": "1526165197"
+      },
+      {
+        "text": "يدير بيانات المنتج",
+        "selectedEscoKnowledge": [
+          "يدير بيانات المنتج"
+        ],
+        "id": "649208203"
+      },
+      {
+        "text": "الفيزياء النووية",
+        "selectedEscoKnowledge": [
+          "الفيزياء النووية"
+        ],
+        "id": "314223141"
+      }
+    ],
+    "description": {
+      "en": "Design engineers develop new conceptual and detailed designs. They create the look for these concepts or products and the systems used to make them. Design engineers work with engineers and marketers to enhance the functioning and efficiency of existing devices.Design engineers develop new conceptual and detailed designs. They create the look for these concepts or products and the systems used to make them. Design engineers work with engineers and marketers to enhance the functioning and efficiency of existing devices.Design engineers develop new conceptual and detailed designs. They create the look for these concepts or products and the systems used to make them. Design engineers work with engineers and marketers to enhance the functioning and efficiency of existing devices.",
+      "ar": "يقوم مهندسو التصميم بتطوير تصميمات مفاهيمية وتفصيلية جديدة. إنهم يصنعون المظهر لهذه المفاهيم أو المنتجات والأنظمة المستخدمة في صنعها. يعمل مهندسو التصميم مع المهندسين والمسوقين لتحسين أداء وكفاءة الأجهزة الحالية.Design engineers develop new conceptual and detailed designs. They create the look for these concepts or products and the systems used to make them. Design engineers work with engineers and marketers to enhance the functioning and efficiency of existing devices.Design engineers develop new conceptual and detailed designs. They create the look for these concepts or products and the systems used to make them. Design engineers work with engineers and marketers to enhance the functioning and efficiency of existing devices."
+    },
+    "name": {
+      "en": "job test tamm (To be closed)",
+      "ar": "اختبار نموذج الوظيفة (To be closed)"
+    },
+    "platform": null,
+    "grade": "2",
+    "uniquePosition": null,
+    "uniqueJobTitleId": "",
+    "majorGroup": null,
+    "company": "Emirates Cement Factory - GHC",
+    "companyId": "AX-OIDIRRTjQd-UeaDNX",
+    "createdBy": "fatima.123",
+    "jobRole": "Marketing Jobs",
+    "criticalityLevel": "High",
+    "jobCategory": "Senior Management",
+    "jobTitleArabic": "اختبار نموذج الوظيفة (To be closed)",
+    "jobTitle": "job test tamm (To be closed)",
+    "escoOccupationTitle": "",
+    "escoMajorGroup": null,
+    "escoSubMajorGroup": null,
+    "escoMinorGroup": null,
+    "escoElementaryOccupation": null,
+    "escoOccupationAr": "مهندس تصميم / مهندسة تصميم",
+    "micPositionCode": "",
+    "suggestionsOpt1": null,
+    "suggestionsOpt2": null,
+    "suggestionsOpt3": null,
+    "occupation": {
+      "preferredLabel": "design engineer",
+      "preferredLabelAr": "مهندس تصميم / مهندسة تصميم",
+      "altLables": "product engineer,design engineer,industrial specialist,industrial expert,product design engineer,designing engineer",
+      "altLablesAr": "nan",
+      "description": "Design engineers develop new conceptual and detailed designs. They create the look for these concepts or products and the systems used to make them. Design engineers work with engineers and marketers to enhance the functioning and efficiency of existing devices.",
+      "descriptionAr": "يضع مهندسو التصميم تصميمات مفاهيمية ومُفصّلة جديدة. فهم يبتكرون البحث عن هذه المفاهيم أو المنتجات والأنظمة المستخدمة في تصنيعها. ويعمل مهندسو التصميم مع المهندسين والمسوقين لتحسين أداء الأجهزة الموجودة وكفاءتها.",
+      "similarity": "1.0",
+      "iscoGroup": "2149",
+      "id": "",
+      "code": "2149.2.4",
+      "escoCode": ""
+    },
+    "selectedJobType": "title",
+    "parentCompany": "Takafo System",
+    "positionLocation": {
+  
+    }
+  }
