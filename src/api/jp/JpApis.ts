@@ -57,4 +57,24 @@ export default class JpCreation {
 
         return responses
     }
+
+    public async jpClose(jpId: String) {
+        let jpClosureContext = await request.newContext({
+            baseURL: process.env.apiUrl!,
+            extraHTTPHeaders: {
+                'Authorization': 'Bearer ' + await authenticator.backofficeAuth(),
+            },
+        });
+
+        const responses = await jpClosureContext.post('closeVacancy', {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data: {
+                'id': jpId,
+                'comment': 'test',
+                'reason': 'VACANCY_EXPIRED',
+            }
+        })
+    }
 }

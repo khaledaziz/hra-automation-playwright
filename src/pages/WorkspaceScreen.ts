@@ -56,6 +56,7 @@ export default class WorkspaceScreen {
     async clickScheduleInterview(){
         await this.page.locator(this.scheduleInterviewBtn).click();
         await this.page.waitForResponse(response => response.url().includes('/js/interview/') && response.status() === 200);
+        await this.page.waitForResponse(response => response.url().includes('/getUsersByCompany') && response.status() === 200);
     }
 
     async enterInterviewDate(date: string){

@@ -9,26 +9,30 @@ import type { APIResponse } from '@playwright/test';
 import BoHomeScreen from '../pages/BoHomeScreen';
 import WorkspaceScreen from '../pages/WorkspaceScreen';
 import JobPostScreen from '../pages/JobPostScreen';
+import ElasticHelper from '../utils/ElasticHelper';
 
 const jsBaseJSON = require('../data/requests-data/jobseekers/registerJobseekerData.json');
 const algBaseJSON = require('../data/requests-data/job-posts/algorithm.json');
 const jpBaseJSON = require('../data/requests-data/job-posts/jobPost-data.json');
 
 var jsId ;
+var emiratesId ;
 let jpId;
 let jpCode;
 let algorithmId;
 let templateId;
 let jsRegisterContext
-let jpCreationContext
 const _ = require('lodash');
+const generalFunctionsObj = new GeneralFunctions();
+const elasticHelperObj = new ElasticHelper();
+const jpCreationContext = new JpCreation();
 
-test.beforeEach(async ({ request }) => {
-  const generalFunctionsObj = new GeneralFunctions();
+test.beforeEach(async ({ request, page }) => {
+  
   jsRegisterContext = new JsRegister();
-  jpCreationContext = new JpCreation();
+  
 
-  let idn = await generalFunctionsObj.getRandomImaratesId();
+  emiratesId = await generalFunctionsObj.getRandomImaratesId();
 
   
   // const data = await fs.promises.readFile('src/data/requests-data/jobseekers/registerJobseekerData.json', 'utf8');
@@ -64,11 +68,11 @@ test.beforeEach(async ({ request }) => {
 
   const jsRequestBody = _.cloneDeep(jsBaseJSON); // Deep clone
 
-  jsRequestBody.uaePassData.idn = ''+idn+'';
+  jsRequestBody.uaePassData.idn = ''+emiratesId+'';
   jsRequestBody.uaePassData.userEmail = 'testuser222@test.com';
-  jsRequestBody.icaData.personName.fullEnglishName = '222 ' + idn;
+  jsRequestBody.icaData.personName.fullEnglishName = '111 ' + emiratesId;
   
-  let jsResponses = await (await jsRegisterContext.register(jsRequestBody, idn.toString())).json();
+  let jsResponses = await (await jsRegisterContext.register(jsRequestBody, emiratesId.toString())).json();
   jsId = jsResponses.data.id;
   console.log(jsId);
 
@@ -79,7 +83,7 @@ test.beforeEach(async ({ request }) => {
 
 
   const algRequestBody = _.cloneDeep(algBaseJSON);
-  algRequestBody.name = 'algorithm test' + idn;
+  algRequestBody.name = 'algorithm test' + emiratesId;
 
   let algResponse = await (await jpCreationContext.algCreate(algRequestBody)).json();
   algorithmId = algResponse.algorthimTemplate.id;
@@ -88,18 +92,18 @@ test.beforeEach(async ({ request }) => {
   //Create a JP
   const jpRequestBody = _.cloneDeep(jpBaseJSON);
 
-  jpRequestBody.name.en = 'job test for Takafo' + idn + '(To be closed)';
-  jpRequestBody.name.ar = 'وظيفة اختبار تكافو' + idn + '(To be closed)';
-  jpRequestBody.jobTitle = 'job test for Takafo' + idn + '(To be closed)';
-  jpRequestBody.jobTitleArabic = 'وظيفة اختبار تكافو' + idn + '(To be closed)';
+  jpRequestBody.name.en = 'job test for Takafo' + emiratesId + '(To be closed)';
+  jpRequestBody.name.ar = 'وظيفة اختبار تكافو' + emiratesId + '(To be closed)';
+  jpRequestBody.jobTitle = 'job test for Takafo' + emiratesId + '(To be closed)';
+  jpRequestBody.jobTitleArabic = 'وظيفة اختبار تكافو' + emiratesId + '(To be closed)';
   jpRequestBody.degree = 'Agriculture';
   jpRequestBody.minRequiredEduLevel = 'Doctoral';
   jpRequestBody.major = 'Agribusiness';
   jpRequestBody.matchingAlgorithmId = algorithmId;
-  jpRequestBody.matchingAlgorithm = 'algorithm test' + idn;
+  jpRequestBody.matchingAlgorithm = 'algorithm test' + emiratesId;
 
 
-  let jpResponse = await (await jpCreationContext.jpCreate(jpRequestBody, idn.toString())).json();
+  let jpResponse = await (await jpCreationContext.jpCreate(jpRequestBody, emiratesId.toString())).json();
   jpId = jpResponse.data.id;
   jpCode = jpResponse.data.eoCode;
   console.log(jpCode);
@@ -152,6 +156,11 @@ test('has title', async ({ page }) => {
 
   // Expect a title "to contain" a substring.
   //await expect(page).toHaveTitle("Takafo");
+});
+
+test.afterEach('cleanup', async () => {
+  await (await elasticHelperObj.deleteJs(emiratesId)).json();
+  await jpCreationContext.jpClose(jpId);
 });
 
 test.skip('get started link', async ({ page }) => {
