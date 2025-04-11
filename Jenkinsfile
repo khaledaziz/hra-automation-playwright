@@ -1,9 +1,6 @@
 pipeline {
     agent any  // run on any available agent (ensure it has Node & browsers)
     
-    tools { 
-        nodejs "NodeJS 23.11.0"  // use the NodeJS tool configured in Jenkins
-    }
 
     stages {
         stage('Install Dependencies') {
