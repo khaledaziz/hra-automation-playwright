@@ -7,6 +7,7 @@ pipeline {
             steps {
                 // Use npm ci for a clean, reproducible install (faster than npm install if lockfile exists)
                 bat 'npm ci'
+                bat 'npx playwright install'
             }
         }
         stage('Run Playwright Tests') {
