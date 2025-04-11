@@ -28,11 +28,5 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Always record test results (if JUnit report is generated, uncomment below)
-            // junit 'results.xml'
-        }
-        // We could also add cleanup steps here if needed (e.g., npm cache clean or remove node modules)
-    }
+    
 }
