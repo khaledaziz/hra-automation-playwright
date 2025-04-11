@@ -6,14 +6,14 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Use npm ci for a clean, reproducible install (faster than npm install if lockfile exists)
-                sh 'npm ci'
+                bat 'npm ci'
             }
         }
         stage('Run Playwright Tests') {
             steps {
                 // Run tests in headless mode (default). 
                 // The --reporter option here outputs both line summary and HTML results.
-                sh 'npx playwright test --reporter=dot,html'
+                bat 'npx playwright test --reporter=dot,html'
             }
         }
         stage('Publish Reports') {
