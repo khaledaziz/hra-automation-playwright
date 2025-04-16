@@ -22,9 +22,9 @@ pipeline {
                 // Archive the Playwright HTML report so we can view it later
                 archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
 
-                // Optionally, publish HTML report to Jenkins (if HTML Publisher plugin is installed)
-                // publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, 
-                //    keepAll: true, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'Playwright HTML Report'])
+                Optionally, publish HTML report to Jenkins (if HTML Publisher plugin is installed)
+                publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, 
+                   keepAll: true, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'Playwright HTML Report'])
             }
         }
     }
