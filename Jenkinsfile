@@ -21,6 +21,14 @@ pipeline {
     post {
         always { // Or 'success' if you only want reports for successful builds
             echo 'Archiving HTML reports...'
-publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', includes: '**/*.html', keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true]) }
-   
+            publishHTML([allowMissing: false,
+            alwaysLinkToLastBuild: false,
+            icon: '', includes: '**/*.html', 
+            keepAll: false, reportDir: '', 
+            reportFiles: 'index.html', 
+            reportName: 'HTML Report', 
+            reportTitles: '', 
+            useWrapperFileDirectly: true])
+            }
+            }    
 }
