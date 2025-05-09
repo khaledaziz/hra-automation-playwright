@@ -33,7 +33,8 @@ pipeline {
                 // Optional: Allow missing reports (e.g., if tests didn't run or failed before reporting)
                 allowMissing: false, // Set to true if you want the build to pass even if the report is missing
                 // Optional: Link to build (useful for per-build reports)
-                alwaysLinkToLastBuild: false
+                alwaysLinkToLastBuild: false, 
+                includes: '**/*.html'
             ])
         }
     }
