@@ -17,7 +17,8 @@ pipeline {
                 bat 'npx playwright test'
             }
         }
-        post {
+    }
+    post {
         always { // Or 'success' if you only want reports for successful builds
             echo 'Archiving HTML reports...'
             publishHTML(target: [
@@ -36,7 +37,5 @@ pipeline {
             ])
         }
     }
-    }
-
     
 }
