@@ -14,16 +14,16 @@ pipeline {
             steps {
                 // Run tests in headless mode (default). 
                 // The --reporter option here outputs both line summary and HTML results.
-                bat 'npx playwright test --reporter=dot,html'
+                bat 'npx playwright test'
             }
         }
         stage('Publish Reports') {
             steps {
-                publishHTML(target: [
-                    reportName: 'playwright test results',
-                    reportDir: 'test-results',
-                    reportFiles: 'index.html'
-                ])
+                publishHTML target: [
+                    reportDir: 'playwright-report',
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright Test Report'
+                ]
             }
         }
     }
