@@ -17,15 +17,25 @@ pipeline {
                 bat 'npx playwright test'
             }
         }
-        stage('Publish Reports') {
-            steps {
-                publishHTML target: [
-                    reportDir: 'playwright-report',
-                    reportFiles: 'index.html',
-                    reportName: 'Playwright Test Report'
-                ]
-            }
+        post {
+        always { // Or 'success' if you only want reports for successful builds
+            echo 'Archiving HTML reports...'
+            publishHTML(target: [
+                // This must match the 'outputFolder' in playwright.config.js
+                reportDir: 'playwright-report',
+                // This is usually 'index.html' for Playwright reports
+                reportFiles: 'index.html',
+                // Title for the link in Jenkins job page
+                reportName: 'Playwright HTML Report',
+                // Optional: Keep all past reports
+                keepAll: true,
+                // Optional: Allow missing reports (e.g., if tests didn't run or failed before reporting)
+                allowMissing: false, // Set to true if you want the build to pass even if the report is missing
+                // Optional: Link to build (useful for per-build reports)
+                alwaysLinkToLastBuild: false
+            ])
         }
+    }
     }
 
     
