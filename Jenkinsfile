@@ -22,6 +22,7 @@ pipeline {
         always { // Or 'success' if you only want reports for successful builds
             echo 'Archiving HTML reports...'
             publishHTML([allowMissing: false,
+            reportDir: 'playwright-report',
             alwaysLinkToLastBuild: false,
             icon: '', includes: '**/*.html', 
             keepAll: false, reportDir: '', 
