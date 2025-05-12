@@ -35,7 +35,7 @@ pipeline {
                 // Optional: Link to build (useful for per-build reports)
                 alwaysLinkToLastBuild: false, 
                 includes: '**/*.html', 
-                useWrapperFileDirectly: true
+                useWrapperFileDirectly: false
             ])
         }
     }
