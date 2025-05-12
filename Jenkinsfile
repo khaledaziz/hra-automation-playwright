@@ -34,7 +34,8 @@ pipeline {
                 allowMissing: false, // Set to true if you want the build to pass even if the report is missing
                 // Optional: Link to build (useful for per-build reports)
                 alwaysLinkToLastBuild: false, 
-                includes: '**/*.html'
+                includes: '**/*.html', 
+                useWrapperFileDirectly: true
             ])
         }
     }
