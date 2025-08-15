@@ -15,10 +15,10 @@ const jsBaseJSON = require('../data/requests-data/jobseekers/registerJobseekerDa
 const algBaseJSON = require('../data/requests-data/job-posts/algorithm.json');
 const jpBaseJSON = require('../data/requests-data/job-posts/jobPost-data.json');
 
-var jsId ;
+var jsId: string ;
 var emiratesId: string | number;
-let jpId: String;
-let jpCode;
+let jpId: string;
+let jpCode: string;
 let algorithmId;
 let templateId;
 let jsRegisterContext
@@ -120,39 +120,39 @@ test('has title', async ({ page }) => {
   const workspaceScreen = new WorkspaceScreen(page);
   const jobPostScreen = new JobPostScreen(page);
 
-  // await page.goto(process.env.url!);
-  // await loginPage.enterUsername("backoffice");
-  // await loginPage.enterPassword("test");
-  // await loginPage.clickLogin();
+  await page.goto(process.env.url!);
+  await loginPage.enterUsername("backoffice");
+  await loginPage.enterPassword("test");
+  await loginPage.clickLogin();
 
-  // await homeScreen.openWorkspace();
-  // await workspaceScreen.clickAddBtn();
-  // await jobPostScreen.jpSearch(jpId);
-  // await jobPostScreen.addJpRwrs();
-  // await workspaceScreen.startMatching(jpCode);
-  // await workspaceScreen.jsSearch(jsId);
-  // await workspaceScreen.jsShortlist();
-  // await workspaceScreen.openShortlistedTab();
-  // await workspaceScreen.clickScheduleInterview();
-  // await workspaceScreen.enterInterviewDate('26-10-2025');
-  // await workspaceScreen.enterInterviewTime('01', '00');
-  // await workspaceScreen.enterInterviewDuration('01:30');
-  // await workspaceScreen.enterInterviewPanel('fatma');
-  // await workspaceScreen.enterInterviewMode('F2F');
-  // await workspaceScreen.enterInterviewLocation('test');
-  // await workspaceScreen.saveInterviewOfferModal();
-  // await workspaceScreen.clickScheduleInterview();
-  // await workspaceScreen.clickAccept();
-  // await workspaceScreen.enterJoiningDate('26-10-2025');
-  // await workspaceScreen.enterSalary('432432')
-  // await workspaceScreen.enterComment('test');
-  // await workspaceScreen.saveInterviewOfferModal();
-  // await workspaceScreen.clickOffer();
-  // await workspaceScreen.clickAccept();
+  await homeScreen.openWorkspace();
+  await workspaceScreen.clickAddBtn();
+  await jobPostScreen.jpSearch(jpId);
+  await jobPostScreen.addJpRwrs();
+  await workspaceScreen.startMatching(jpCode);
+  await workspaceScreen.jsSearch(jsId);
+  await workspaceScreen.jsShortlist();
+  await workspaceScreen.openShortlistedTab();
+  await workspaceScreen.clickScheduleInterview();
+  await workspaceScreen.enterInterviewDate('26-10-2025');
+  await workspaceScreen.enterInterviewTime('01', '00');
+  await workspaceScreen.enterInterviewDuration('01:30');
+  await workspaceScreen.enterInterviewPanel('fatma');
+  await workspaceScreen.enterInterviewMode('F2F');
+  await workspaceScreen.enterInterviewLocation('test');
+  await workspaceScreen.saveInterviewOfferModal();
+  await workspaceScreen.clickScheduleInterview();
+  await workspaceScreen.clickAccept();
+  await workspaceScreen.enterJoiningDate('26-10-2025');
+  await workspaceScreen.enterSalary('432432')
+  await workspaceScreen.enterComment('test');
+  await workspaceScreen.saveInterviewOfferModal();
+  await workspaceScreen.clickOffer();
+  await workspaceScreen.clickAccept();
 
 
-  // await page.waitForTimeout(10000);
-  //await loginPage.clickLogin();
+  await page.waitForTimeout(10000);
+  await loginPage.clickLogin();
 
   // Expect a title "to contain" a substring.
   //await expect(page).toHaveTitle("Takafo");
