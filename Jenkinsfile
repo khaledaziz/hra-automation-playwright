@@ -15,7 +15,7 @@ pipeline {
         stage('Prepare Workspace') {
             steps {
                 // Create directory for test results
-                sh 'mkdir -p ${TEST_REPORTS}'
+                cmd 'mkdir -p ${TEST_REPORTS}'
                 
             }
         }
@@ -68,7 +68,7 @@ pipeline {
             // Optional: Docker cleanup
             script {
                 try {
-                    sh 'docker system prune -f'
+                    cmd 'docker system prune -f'
                 } catch (e) {
                     echo "Docker cleanup failed: ${e}"
                 }
