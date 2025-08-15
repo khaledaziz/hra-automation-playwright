@@ -60,19 +60,4 @@ pipeline {
         }
     }
     
-    post {
-        always {
-            // Clean up workspace
-            cleanWs()
-            
-            // Optional: Docker cleanup
-            script {
-                try {
-                    cmd 'docker system prune -f'
-                } catch (e) {
-                    echo "Docker cleanup failed: ${e}"
-                }
-            }
-        }
-    }
 }
