@@ -16,8 +16,8 @@ const algBaseJSON = require('../data/requests-data/job-posts/algorithm.json');
 const jpBaseJSON = require('../data/requests-data/job-posts/jobPost-data.json');
 
 var jsId ;
-var emiratesId ;
-let jpId;
+var emiratesId: string | number;
+let jpId: String;
 let jpCode;
 let algorithmId;
 let templateId;

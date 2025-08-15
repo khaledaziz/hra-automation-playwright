@@ -10,13 +10,11 @@ export default class JpCreation {
             baseURL: process.env.apiUrl!,
             extraHTTPHeaders: {
                 'Authorization': 'Bearer ' + await authenticator.backofficeAuth(),
+                'Content-Type': 'application/json',
             },
         });
 
         const responses = await jpContext.post('saveVacancy', {
-            headers: {
-                'Content-Type': 'application/json'
-            },
             data: jpBody
         })
 
