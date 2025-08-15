@@ -1,43 +1,47 @@
 pipeline {
-    agent any  // run on any available agent (ensure it has Node & browsers)
-    
+    agent any
+
+    environment {
+        IMAGE_NAME = "playwright-tests"
+        REPORT_DIR = "playwright-report"
+    }
 
     stages {
-        stage('Install Dependencies') {
+        
+        stage('Build Docker Image') {
             steps {
-                // Use npm ci for a clean, reproducible install (faster than npm install if lockfile exists)
-                bat 'npm ci'
-                bat 'npx playwright test --reporter=dot,html'
+                script {
+                    sh "docker build -t ${IMAGE_NAME} ."
+                }
             }
         }
-        stage('Run Playwright Tests') {
+
+        stage('Run Tests in Docker') {
             steps {
-                // Run tests in headless mode (default). 
-                // The --reporter option here outputs both line summary and HTML results.
-                bat 'npx playwright test'
+                script {
+                    sh """
+                    docker run --rm \
+                        -v $PWD/${REPORT_DIR}:/app/${REPORT_DIR} \
+                        ${IMAGE_NAME}
+                    """
+                }
+            }
+        }
+
+        stage('Archive Test Report') {
+            steps {
+                archiveArtifacts artifacts: "${REPORT_DIR}/**", allowEmptyArchive: true
+            }
+        }
+
+        stage('Publish HTML Report') {
+            steps {
+                publishHTML(target: [
+                    reportDir: "${REPORT_DIR}",
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright Test Report'
+                ])
             }
         }
     }
-    post {
-        always { // Or 'success' if you only want reports for successful builds
-            echo 'Archiving HTML reports...'
-            publishHTML(target: [
-                // This must match the 'outputFolder' in playwright.config.js
-                reportDir: 'playwright-report',
-                // This is usually 'index.html' for Playwright reports
-                reportFiles: 'index.html',
-                // Title for the link in Jenkins job page
-                reportName: 'Playwright HTML Report',
-                // Optional: Keep all past reports
-                keepAll: true,
-                // Optional: Allow missing reports (e.g., if tests didn't run or failed before reporting)
-                allowMissing: false, // Set to true if you want the build to pass even if the report is missing
-                // Optional: Link to build (useful for per-build reports)
-                alwaysLinkToLastBuild: false, 
-                includes: '**/*.html', 
-                useWrapperFileDirectly: false
-            ])
-        }
-    }
-    
 }
