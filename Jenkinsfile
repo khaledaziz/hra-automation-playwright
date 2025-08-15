@@ -12,13 +12,7 @@ pipeline {
     }
     
     stages {
-        stage('Prepare Workspace') {
-            steps {
-                // Create directory for test results
-                bat 'mkdir -p ${TEST_REPORTS}'
-                
-            }
-        }
+        
         
         stage('Build Docker Image') {
             steps {
