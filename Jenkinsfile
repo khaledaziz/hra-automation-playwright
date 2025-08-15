@@ -1,44 +1,77 @@
 pipeline {
     agent any
-
-    environment {
-        IMAGE_NAME = "playwright-tests"
-        REPORT_DIR = "playwright-report"
+    
+    options {
+        timeout(time: 30, unit: 'MINUTES')
     }
-
+    
+    environment {
+        // Customize these as needed
+        DOCKER_IMAGE = "playwright-tests"
+        TEST_REPORTS = "${WORKSPACE}/test-results"
+    }
+    
     stages {
+        stage('Prepare Workspace') {
+            steps {
+                // Create directory for test results
+                sh 'mkdir -p ${TEST_REPORTS}'
+                
+            }
+        }
         
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "docker build -t ${IMAGE_NAME} ."
+                    // Build the image from your Dockerfile
+                    docker.build("${env.DOCKER_IMAGE}")
                 }
             }
         }
-
-        stage('Run Tests in Docker') {
+        
+        stage('Run Playwright Tests') {
             steps {
                 script {
-                    cmd """
-                    docker build --no-cache -t my-playwright-tests .
-                    """
+                    // Run the container with volume mounting for test results
+                    docker.image("${env.DOCKER_IMAGE}").run(
+                        "--rm -v ${TEST_REPORTS}:/app/test-results -e CI=true"
+                    )
                 }
             }
         }
-
-        stage('Archive Test Report') {
+        
+        stage('Capture Results') {
             steps {
-                archiveArtifacts artifacts: "${REPORT_DIR}/**", allowEmptyArchive: true
+                // Archive test artifacts
+                archiveArtifacts artifacts: 'test-results/**/*'
+                
+                // Publish HTML report (requires HTML Publisher plugin)
+                publishHTML(target: [
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'test-results',
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright Report'
+                ])
+                
+    
             }
         }
-
-        stage('Publish HTML Report') {
-            steps {
-                publishHTML(target: [
-                    reportDir: "${REPORT_DIR}",
-                    reportFiles: 'index.html',
-                    reportName: 'Playwright Test Report'
-                ])
+    }
+    
+    post {
+        always {
+            // Clean up workspace
+            cleanWs()
+            
+            // Optional: Docker cleanup
+            script {
+                try {
+                    sh 'docker system prune -f'
+                } catch (e) {
+                    echo "Docker cleanup failed: ${e}"
+                }
             }
         }
     }
