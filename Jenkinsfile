@@ -15,7 +15,7 @@ pipeline {
         stage('Prepare Workspace') {
             steps {
                 // Create directory for test results
-                cmd 'mkdir -p ${TEST_REPORTS}'
+                bat 'mkdir -p ${TEST_REPORTS}'
                 
             }
         }
