@@ -19,10 +19,8 @@ pipeline {
         stage('Run Tests in Docker') {
             steps {
                 script {
-                    sh """
-                    docker run --rm \
-                        -v $PWD/${REPORT_DIR}:/app/${REPORT_DIR} \
-                        ${IMAGE_NAME}
+                    cmd """
+                    docker build --no-cache -t my-playwright-tests .
                     """
                 }
             }
