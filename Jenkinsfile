@@ -43,7 +43,7 @@ pipeline {
         stage('Capture Results') {
             steps {
                 // Archive test artifacts
-                archiveArtifacts artifacts: 'test-results/**/*'
+                //archiveArtifacts artifacts: 'test-results/**/*'
                 
                 // Publish HTML report (requires HTML Publisher plugin)
                 publishHTML(target: [
