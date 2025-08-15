@@ -27,19 +27,13 @@ pipeline {
     steps {
         script {
             // Debug: Print what we're about to run
-            echo "Running Docker image ${env.DOCKER_IMAGE} with test results in ${env.TEST_RESULTS}"
-            
-            // Run container with proper command and debugging
-            def container = docker.image("${env.DOCKER_IMAGE}").run(
-                "--rm -v ${env.TEST_RESULTS}:/app/test-results -e CI=true -e PLAYWRIGHT_HEADLESS=true",
-                "npx playwright test --reporter=html,line"
-            )
-            
-            // Get container logs for debugging
-            sh "docker logs ${container.id}"
-            
-            // Verify files were created
-            sh "ls -la ${env.TEST_RESULTS} || true"
+            docker.image("${env.DOCKER_IMAGE}").run(
+                        "--rm -v ${env.TEST_RESULTS}:C:\\app\\test-results -e CI=true",
+                        "npx playwright test --reporter=html,line"
+                    )
+                    
+                    // Verify files were created
+                    bat "dir /s ${env.TEST_RESULTS}"
         }
     }
 }
