@@ -14,34 +14,11 @@ pipeline {
     }
     
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm  // This ensures your source code (including Dockerfile) is checked out
-            }
-        }
         
         stage('Clean Workspace') {
             steps {
                 cleanWs()
                 bat 'if exist test-results rmdir /s /q test-results'
-            }
-        }
-        
-        stage('Verify Files') {
-            steps {
-                script {
-                    // Verify Dockerfile exists
-                    def dockerfileExists = fileExists "${env.DOCKERFILE_PATH}/Dockerfile"
-                    if (!dockerfileExists) {
-                        error("Dockerfile not found at ${env.WORKSPACE}/${env.DOCKERFILE_PATH}")
-                    }
-                    
-                    // Verify docker-compose exists
-                    def composeExists = fileExists "${env.COMPOSE_FILE}"
-                    if (!composeExists) {
-                        error("docker-compose.yml not found at ${env.WORKSPACE}")
-                    }
-                }
             }
         }
         
