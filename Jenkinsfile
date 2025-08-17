@@ -23,19 +23,11 @@ pipeline {
             }
         }
         
-        stage('Run Playwright Tests') {
+        stage('Run Tests') {
     steps {
-        script {
-            // Debug: Print what we're about to run
-            docker.image("${env.DOCKER_IMAGE}").run(
-                        "--rm -v ${env.TEST_RESULTS}:C:\\app\\test-results -e CI=true",
-                        "npx playwright test --reporter=html,line"
-                    )
-                    
-                    // Verify files were created
-                    bat "dir /s ${env.TEST_RESULTS}"
-        }
+        bat 'docker-compose up --abort-on-container-exit --build'
     }
+}
 }
         
         stage('Capture Results') {
