@@ -1,7 +1,8 @@
-version: '3.8'
+version: '3'
 services:
-  playwright:
-    image: playwright-tests
+  tests:
     build: .
     volumes:
-      - .:/app
+      - ./test-results:/app/test-results
+    environment:
+      CI: "true"
