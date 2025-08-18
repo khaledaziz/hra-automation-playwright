@@ -44,7 +44,7 @@ pipeline {
                 // -e BASE_URL: Pass the environment variable to the container.
                 // my-playwright-tests: The name of the image we just built.
                 // npx playwright test: The command to run inside the container.
-                bat 'docker run --rm -v %CD%:/app my-playwright-tests npx playwright test'
+                bat 'docker run --rm my-playwright-tests npx playwright test'
             }
         }
     
