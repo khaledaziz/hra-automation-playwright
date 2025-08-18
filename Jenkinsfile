@@ -47,7 +47,7 @@ pipeline {
                 bat 'docker run --rm -v /tmp:/dev/shm my-playwright-tests npx playwright test --reporter=junit --output=junit-report.xml'
             }
         }
-    }
+    
         
         stage('Capture Results') {
             steps {
