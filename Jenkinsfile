@@ -32,7 +32,6 @@ pipeline {
             }
         }
         
-        stages {
         stage('Build and Run Playwright Tests') {
             steps {
                 // First, build the Docker image using the Dockerfile in the current directory.
