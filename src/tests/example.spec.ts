@@ -109,6 +109,7 @@ test.beforeEach(async ({ request, page }) => {
   console.log(jpCode);
 
   await jpCreationContext.jpActivate(jpId);
+  console.log(jpCode);
 
 });
 
@@ -119,11 +120,13 @@ test('has title', async ({ page }) => {
   const homeScreen = new BoHomeScreen(page);
   const workspaceScreen = new WorkspaceScreen(page);
   const jobPostScreen = new JobPostScreen(page);
-
+  console.log('before browser')
   await page.goto(process.env.url!);
   await loginPage.enterUsername("backoffice");
   await loginPage.enterPassword("test");
   await loginPage.clickLogin();
+
+  console.log('after login')
 
   await homeScreen.openWorkspace();
   await workspaceScreen.clickAddBtn();

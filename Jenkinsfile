@@ -32,40 +32,23 @@ pipeline {
             }
         }
         
-        stage('Build Docker Image') {
+        stages {
+        stage('Build and Run Playwright Tests') {
             steps {
-                script {
-                    // Use absolute path to Dockerfile
-                    def dockerfilePath = "${WORKSPACE}\\Dockerfile"
-                    
-                    echo "Building Docker image from: ${dockerfilePath}"
-                    bat "type ${dockerfilePath}"  // Debug: Show Dockerfile contents
-                    
-                    try {
-                        docker.build("${env.DOCKER_IMAGE}", "--file ${dockerfilePath} .")
-                    } catch (Exception e) {
-                        bat 'docker images'  // Debug: List existing images
-                        error("Docker build failed: ${e.message}")
-                    }
-                }
+                // First, build the Docker image using the Dockerfile in the current directory.
+                // This creates a new image tagged 'my-playwright-tests'.
+                bat 'docker build -t my-playwright-tests .'
+
+                // Next, run the tests inside a container from the newly built image.
+                // --rm: Automatically remove the container when it exits.
+                // -v /tmp:/dev/shm: Mount a volume for shared memory, which is often needed by Chromium.
+                // -e BASE_URL: Pass the environment variable to the container.
+                // my-playwright-tests: The name of the image we just built.
+                // npx playwright test: The command to run inside the container.
+                bat 'docker run --rm -v /tmp:/dev/shm my-playwright-tests npx playwright test --reporter=junit --output=junit-report.xml'
             }
         }
-        
-        stage('Run Tests') {
-            steps {
-                script {
-                    try {
-                        bat """
-                            docker-compose -f ${env.COMPOSE_FILE} build --no-cache
-                            docker-compose -f ${env.COMPOSE_FILE} up --abort-on-container-exit
-                        """
-                    } catch (Exception e) {
-                        echo "Tests failed (proceeding to capture results): ${e.message}"
-                        currentBuild.result = 'UNSTABLE'
-                    }
-                }
-            }
-        }
+    }
         
         stage('Capture Results') {
             steps {
