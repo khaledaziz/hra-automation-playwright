@@ -154,8 +154,8 @@ test('has title', async ({ page }) => {
   await workspaceScreen.clickAccept();
 
 
-  await page.waitForTimeout(10000);
-  await loginPage.clickLogin();
+  // await page.waitForTimeout(10000);
+  // await loginPage.clickLogin();
 
   // Expect a title "to contain" a substring.
   //await expect(page).toHaveTitle("Takafo");
