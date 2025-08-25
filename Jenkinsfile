@@ -51,10 +51,6 @@ pipeline {
         
         stage('Capture Results') {
             steps {
-                bat """
-                    if not exist "${env.TEST_REPORTS}" mkdir "${env.TEST_REPORTS}"
-                    xcopy /s /y "results\\*" "${env.TEST_REPORTS}\\"
-                """
                 
                 publishHTML(target: [
                     allowMissing: true,
@@ -65,8 +61,6 @@ pipeline {
                     reportName: 'Playwright Report'
                 ])
                 
-                junit allowEmptyResults: true,
-                    testResults: "${env.TEST_REPORTS}\\*.xml"
             }
         }
     }
