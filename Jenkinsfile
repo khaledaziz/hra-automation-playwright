@@ -25,10 +25,6 @@ pipeline {
                 // Run the tests inside the container.
                 // Critical changes here to generate and persist the HTML report.
                 bat """
-                    docker run --rm ^
-                    -v %CD%:/app ^
-                    -v //c/temp:/dev/shm ^
-                    playwright-tests ^
                     npx playwright test --reporter=list,html
                 """
             }
