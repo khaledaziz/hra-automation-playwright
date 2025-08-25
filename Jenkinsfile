@@ -1,75 +1,64 @@
+// A Jenkins declarative pipeline
 pipeline {
     agent any
-    
+
     options {
         timeout(time: 30, unit: 'MINUTES')
         buildDiscarder(logRotator(numToKeepStr: '5'))
     }
     
     environment {
-        DOCKER_IMAGE = "playwright-tests"
-        TEST_REPORTS = "${WORKSPACE}\\test-results"  // Use Windows path separator
-        COMPOSE_FILE = "docker-compose.yml"
+        // We will mount a directory on the host to persist the reports
+        PLAYWRIGHT_REPORT_DIR = "playwright-report"
     }
-    
-    stages {
-        stage('Checkout & Verify') {
-            steps {
-                checkout scm
-                
-                // Debug: Print workspace contents
-                bat 'dir /w'
-                
-                // Verify critical files exist
-                script {
-                    if (!fileExists('Dockerfile')) {
-                        error("Dockerfile not found in workspace root! Found files: ${sh(script: 'dir /b', returnStdout: true)}")
-                    }
-                    if (!fileExists(env.COMPOSE_FILE)) {
-                        error("${env.COMPOSE_FILE} not found in workspace root!")
-                    }
-                }
-            }
-        }
-        
-        stage('Build and Run Playwright Tests') {
-            steps {
-                // First, build the Docker image using the Dockerfile in the current directory.
-                // This creates a new image tagged 'my-playwright-tests'.
-                bat 'docker build -t my-playwright-tests .'
 
-                // Next, run the tests inside a container from the newly built image.
-                // --rm: Automatically remove the container when it exits.
-                // -v /tmp:/dev/shm: Mount a volume for shared memory, which is often needed by Chromium.
-                // -e BASE_URL: Pass the environment variable to the container.
-                // my-playwright-tests: The name of the image we just built.
-                // npx playwright test: The command to run inside the container.
-                bat 'docker run --rm my-playwright-tests npx playwright test'
+    stages {
+        stage('Build Docker Image') {
+            steps {
+                // Build the Docker image using the Dockerfile
+                bat 'docker build -t playwright-tests .'
             }
         }
-    
         
-        stage('Capture Results') {
+        stage('Run Playwright Tests') {
             steps {
-                
-                publishHTML(target: [
-                    allowMissing: true,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: "${env.TEST_REPORTS}",
-                    reportFiles: 'index.html',
-                    reportName: 'Playwright Report'
-                ])
-                
+                // Run the tests inside the container.
+                // Critical changes here to generate and persist the HTML report.
+                bat """
+                    docker run --rm ^
+                    -v %CD%:/app ^
+                    -v //c/temp:/dev/shm ^
+                    playwright-tests ^
+                    npx playwright test --reporter=list,html
+                """
             }
         }
     }
     
     post {
+        // This section runs after the stages, regardless of their outcome.
+        // It's the perfect place to clean up and publish reports.
         always {
-            bat 'docker-compose down --remove-orphans'
+            // First, make sure the HTML report is published for easy viewing.
+            // The 'publishHTML' plugin needs the 'playwright-report' folder to be present on the Jenkins host.
+            // The volume mount in the previous stage ensures this.
+            publishHTML(target: [
+                allowMissing: false, // Set to false to fail the build if the report is not found
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: "${env.PLAYWRIGHT_REPORT_DIR}",
+                reportFiles: 'index.html',
+                reportName: 'Playwright Report'
+            ])
+            
+            // Then, archive the entire report directory as an artifact.
+            // This allows you to download and view the full report later.
+            archiveArtifacts artifacts: "${env.PLAYWRIGHT_REPORT_DIR}/**", allowEmptyArchive: false
+            
+            // Clean up the Docker images and containers to free up space.
             bat 'docker image prune -f'
-            archiveArtifacts artifacts: "${env.TEST_REPORTS}\\**\\*", allowEmptyArchive: true
+            // Since we use --rm, the container is automatically removed.
+            // The 'docker-compose down' command is not needed here as we are not using docker-compose.
         }
     }
 }
