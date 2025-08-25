@@ -26,7 +26,7 @@ pipeline {
                 // Critical changes here to generate and persist the HTML report.
 
                 bat 'if not exist %PLAYWRIGHT_REPORT_DIR% mkdir %PLAYWRIGHT_REPORT_DIR%'
-                
+
                 bat """
                     npx playwright test --reporter=list,html
                 """
@@ -47,7 +47,7 @@ pipeline {
                 keepAll: true,
                 reportDir: "${env.PLAYWRIGHT_REPORT_DIR}",
                 reportFiles: 'index.html',
-                reportName: 'Playwright Report'
+                reportName: 'PlaywrightReport'
             ])
             
             // Then, archive the entire report directory as an artifact.
