@@ -24,6 +24,9 @@ pipeline {
             steps {
                 // Run the tests inside the container.
                 // Critical changes here to generate and persist the HTML report.
+
+                bat 'if not exist %PLAYWRIGHT_REPORT_DIR% mkdir %PLAYWRIGHT_REPORT_DIR%'
+                
                 bat """
                     npx playwright test --reporter=list,html
                 """
