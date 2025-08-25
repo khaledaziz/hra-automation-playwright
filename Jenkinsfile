@@ -28,7 +28,7 @@ pipeline {
                 bat 'if not exist %PLAYWRIGHT_REPORT_DIR% mkdir %PLAYWRIGHT_REPORT_DIR%'
 
                 bat """
-                    npx playwright test --reporter=list,html
+                    npx playwright test --reporter=dot,html
                 """
             }
         }
