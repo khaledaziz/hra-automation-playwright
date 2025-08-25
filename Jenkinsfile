@@ -32,6 +32,20 @@ pipeline {
                 """
             }
         }
+
+        stage('Archive Results') {
+            steps {
+                publishHTML(target: [
+                allowMissing: false, // Set to false to fail the build if the report is not found
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: "${env.PLAYWRIGHT_REPORT_DIR}",
+                reportFiles: 'index.html',
+                reportName: 'PlaywrightReport'
+            ])
+            
+        }
+        }
     }
     
     post {
@@ -41,14 +55,6 @@ pipeline {
             // First, make sure the HTML report is published for easy viewing.
             // The 'publishHTML' plugin needs the 'playwright-report' folder to be present on the Jenkins host.
             // The volume mount in the previous stage ensures this.
-            publishHTML(target: [
-                allowMissing: false, // Set to false to fail the build if the report is not found
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: "${env.PLAYWRIGHT_REPORT_DIR}",
-                reportFiles: 'index.html',
-                reportName: 'PlaywrightReport'
-            ])
             
             // Then, archive the entire report directory as an artifact.
             // This allows you to download and view the full report later.
